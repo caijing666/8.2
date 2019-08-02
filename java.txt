@@ -1,0 +1,48 @@
+1. animal.java代码
+package Animal;
+
+public abstract  class Animal {
+	abstract public  void eat();
+
+}
+
+
+2. See.java的代码
+package Animal;
+
+public interface See {
+public  void seeDoor() ;
+
+}
+
+3. Dog.java的代码
+package Animal;
+
+public class Dog extends Animal implements See {
+
+	@Override
+	public void seeDoor() {
+		System.out.println("看家");
+
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("吃狗粮");
+
+	}
+
+}
+
+
+4. client.java
+package Animal;
+
+public class client {
+public static void main(String[] args) {
+	Animal dog=new Dog();
+	dog.eat();
+	See dog2=new Dog();
+	dog2.seeDoor();
+    }
+}
